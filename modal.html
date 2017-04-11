@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="btootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="btootstrap/css/bootstrap-theme.css">
+    <script src="jquery-3.1.1.js"></script>
+    <script src="btootstrap/js/bootstrap.js"></script>
+    <style>
+        .demo{
+            font-size:25px;
+            color:green;
+            height:30px;
+
+        }
+        .close{margin-right:10px;
+            font-size:35px;
+        }
+    </style>
+
+</head>
+<body>
+
+<button class="btn btn-success" data-toggle="modal" data-target="#msg">触发</button>
+<a href="#" data-target="#msg" data-toggle="modal">hello</a><br>
+<h3 data-target="#msg" data-toggle="modal">触发</h3>
+<input type="button" value="check" id="btn">
+<script>
+    $(function(){
+        $("#btn").click(function(){
+            $("#msg").modal("show");
+        })
+    })
+</script>
+<div class="modal fade" id="msg">
+   <div class="modal-dialog modal-lg">
+       <div class="modal-content">
+           <div class="header">
+               <button class="close" data-dismiss="modal">
+                   <span>&times;</span>
+               </button>
+               <h4 class="modal-title text-center demo">模态框标题</h4>
+           </div>
+           <div class="modal-body">
+               <span class="text-danger demo">还有五分钟交卷！</span>
+           </div>
+           <div class="modal-footer">
+                 <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                 <button class="btn btn-primary" data-dismiss="modal">保存修改</button>
+           </div>
+       </div>
+
+   </div>
+</div>
+</body>
+</html>
